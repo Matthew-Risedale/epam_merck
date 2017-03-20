@@ -378,9 +378,23 @@ html {
     margin-left: 20px; }
   .header__user_name {
     float: right;
-    display: block;
-    vertical-align: middle;
-    height: 64px; }
+    color: #fff;
+    font-weight: 700;
+    line-height: 64px;
+    display: none;
+    margin-right: 15px; }
+  .header__logout {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    float: right;
+    line-height: 64px;
+    background-image: url(../img/logout.png);
+    margin-right: 10px;
+    margin-top: 18px; }
+  @media (min-width: 768px) {
+    .header__user_name {
+      display: inline-block; } }
 
 .burger_button {
   cursor: pointer;
@@ -421,3 +435,7 @@ html {
       transform: rotate(-45deg); }
     .burger_button.is-active span::before, .burger_button.is-active span::after {
       transition-delay: 0s, 0.3s; }
+
+.subheader {
+  height: 50px;
+  border-bottom: 1px solid #e2e2e2; }
