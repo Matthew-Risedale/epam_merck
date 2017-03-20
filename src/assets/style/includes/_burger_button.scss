@@ -1,0 +1,48 @@
+.burger_button{
+  cursor:pointer;
+  position: relative;
+  width: 18px;
+  height: 12px;
+  display: inline-block;
+  span{
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    top: 5px;
+    height: 2px;
+    background: #fff;
+    transition: background 0s 0.3s;
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 18px;
+      background: #fff;
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
+    }
+    &::before{
+      top: -5px;
+      transition-property: top, transform;
+    }
+    &::after{
+      top: 5px;
+      transition-property: top, transform;
+    }
+  }
+  &.is-active span {
+    background: none;
+    &::before{
+      top: 0px;
+      transform: rotate(45deg);
+    }
+    &::after{
+      top: 0px;
+      transform: rotate(-45deg);
+    }
+    &::before, &::after{
+      transition-delay: 0s, 0.3s;
+    }
+  }
+}

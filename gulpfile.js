@@ -52,7 +52,7 @@ gulp.task('pug:build', function() {
 gulp.task('sass:build', function(){
    return gulp.src(path.src.style)
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 10'], { cascade: true }))
+    // .pipe(autoprefixer(['last 3 versions', '> 5%'], { cascade: true }))
     .pipe(gulp.dest(path.dist.css))
     .pipe(browserSync.reload({stream:true}));
 });
