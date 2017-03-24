@@ -2,10 +2,6 @@
 
 var toggles = document.querySelectorAll(".burger_button");
 
-for (var i = toggles.length - 1; i >= 0; i--) {
-  var toggle = toggles[i];
-  toggleHandler(toggle);
-};
 
 function toggleHandler(toggle) {
   toggle.addEventListener( "click", function(e) {
@@ -13,3 +9,5 @@ function toggleHandler(toggle) {
     (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
   });
 }
+
+toggleHandler(toggles[0]);

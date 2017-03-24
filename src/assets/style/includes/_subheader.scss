@@ -1,4 +1,113 @@
 .subheader{
   height: 50px;
   border-bottom: 1px solid $border_gray;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  &container{
+    position: relative;
+  }
+  &__go_back{
+    color: $main_color;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 30px;
+    position: relative;
+    margin-top: 17px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid $main_color;
+      border-top: 2px solid $main_color;
+      transform: rotate(-45deg);
+      top: 2px;
+      left: -15px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__results{
+    display: none;
+    color: $dark_gray;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.87;
+    margin-left: 24px;
+  }
+  &__menu_button{
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    float: right;
+    margin-right: 5%;
+    margin-top: 15px;
+    position: relative;
+    &__dots{
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: $dark_gray;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+      margin-top: 10px;
+      &::before, &::after{
+        content: '';
+        position: absolute;
+        background: $dark_gray;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+      }
+      &::before{
+        top: -6px;
+      }
+      &::after{
+        bottom: -6px;
+      }
+    }
+  }
+  &__menu{
+    width: 214px;
+    height: 154px;
+    border: 1px solid $border_gray;
+    position: absolute;
+    top: 0px;
+    right: 11%;
+    background: #fff;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.5);
+    display: none;
+    z-index: 10;
+    padding-top: 15px;
+    box-sizing: border-box;
+    &_active{
+      display: block;
+    }
+    &__item{
+      height: 30%;
+      & p{
+        display: inline-block;
+        font-size: 14px;
+        color: #48484a;
+        vertical-align: middle;
+        margin-top: 4px;
+      }
+    }
+    & .checkbox{
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+  }
+  @media(min-width: $screen_md){
+    &__results{
+      display: inline-block;
+    }
+  }
 }

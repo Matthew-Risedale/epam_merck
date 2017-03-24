@@ -8,6 +8,21 @@ head
   link(rel="shortcut icon", type="image/png", href="assets/img/favicon.png")
   title Merck
 body
+  
   include templates/header.pug
+  
+  main
+    
+    .container
+      include templates/toolbox.pug
+      
+      - for(var i = 0; i < 4; i++) {
+        include templates/result_item.pug
+      - }
 
   script(type='text/javascript' src='assets/js/burger_menu.js')
+  script(type='text/javascript' src='assets/js/subheader_menu.js')
+  script(type='text/javascript' src='assets/js/checkbox.js')
+    
+    
+  

@@ -6,3 +6,40 @@ html{
   max-width: 1200px;
   margin: 0 auto;
 }
+
+main{
+  background: $main_background;
+}
+
+.checkbox{
+  width: 18px;
+  height: 18px;
+  border: 2px solid $chekbox_border;
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  &--checked{
+    background: $main_color;
+    border: none;
+    position: relative;
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background-color: #fff;
+    }
+    &::before{
+      transform: rotate(45deg);
+      width: 7px;
+      top: 9px;
+      left: 1px;
+    }
+    &::after{
+      transform: rotate(-45deg);
+      width: 13px;
+      top: 7px;
+      left: 4px;
+    }
+  }
+}
