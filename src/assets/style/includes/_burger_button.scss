@@ -20,14 +20,13 @@
       background: #fff;
       transition-duration: 0.3s, 0.3s;
       transition-delay: 0.3s, 0s;
+      transition-property: top, transform;
     }
     &::before{
       top: -5px;
-      transition-property: top, transform;
     }
     &::after{
       top: 5px;
-      transition-property: top, transform;
     }
   }
   &.is-active span {

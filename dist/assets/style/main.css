@@ -342,6 +342,7 @@ html {
 
 .container {
   max-width: 1200px;
+  overflow: hidden;
   margin: 0 auto; }
 
 main {
@@ -374,6 +375,11 @@ main {
       width: 13px;
       top: 7px;
       left: 4px; }
+
+@media (min-width: 768px) {
+  main .container {
+    width: 80%;
+    margin: 0 auto; } }
 
 .header {
   background-color: #00a195;
@@ -448,13 +454,12 @@ main {
       width: 18px;
       background: #fff;
       transition-duration: 0.3s, 0.3s;
-      transition-delay: 0.3s, 0s; }
+      transition-delay: 0.3s, 0s;
+      transition-property: top, transform; }
     .burger_button span::before {
-      top: -5px;
-      transition-property: top, transform; }
+      top: -5px; }
     .burger_button span::after {
-      top: 5px;
-      transition-property: top, transform; }
+      top: 5px; }
   .burger_button.is-active span {
     background: none; }
     .burger_button.is-active span::before {
@@ -561,3 +566,136 @@ main {
   @media (min-width: 768px) {
     .subheader__results {
       display: inline-block; } }
+
+.toolbox {
+  width: 75px;
+  background: #fff;
+  list-style-type: none;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.5);
+  margin-top: 20px; }
+  .toolbox__item > ul {
+    transform: scaleY(0);
+    transform-origin: top;
+    max-height: 0;
+    transition: max-height 0.2s linear, transform 0.4s linear;
+    overflow: hidden; }
+  .toolbox__item li a {
+    text-decoration: none;
+    display: block;
+    margin: 0 auto; }
+  .toolbox__item > a {
+    display: block;
+    position: relative;
+    width: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 13px;
+    color: #48484a;
+    padding-left: 10px;
+    box-sizing: border-box; }
+    .toolbox__item > a::before, .toolbox__item > a::after {
+      content: '';
+      position: absolute;
+      height: 5px;
+      width: 1px;
+      background: #757575;
+      transition: all 0.5s; }
+    .toolbox__item > a::before {
+      top: 22px;
+      right: 13px;
+      transform: rotate(-45deg); }
+    .toolbox__item > a::after {
+      top: 22px;
+      right: 10px;
+      transform: rotate(45deg); }
+  .toolbox__item--active > ul {
+    transform: scaleY(1);
+    max-height: 300px;
+    transition: max-height 0.4s linear, transform 0.2s linear; }
+  .toolbox__item--active > a::before {
+    transform: rotate(45deg); }
+  .toolbox__item--active > a::after {
+    transform: rotate(-45deg); }
+  .toolbox .view_1 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 14px;
+    background-position: -93px -113px; }
+  .toolbox .view_2 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 13px;
+    background-position: -125px -5px; }
+  .toolbox .graph_1 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 17px;
+    background-position: -97px -5px; }
+  .toolbox .graph_2 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 17px;
+    background-position: -98px -32px; }
+  .toolbox .graph_3 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 17px;
+    background-position: -99px -59px; }
+  .toolbox .graph_4 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 17px;
+    background-position: -99px -86px; }
+  .toolbox .graph_5 {
+    background-image: url(../img/spritesheet.png);
+    width: 18px;
+    height: 17px;
+    background-position: -5px -113px; }
+  .toolbox .colors_1 {
+    background-image: url(../img/spritesheet.png);
+    width: 22px;
+    height: 22px;
+    background-position: -67px -64px; }
+  .toolbox .export_1 {
+    background-image: url(../img/spritesheet.png);
+    width: 21px;
+    height: 20px;
+    background-position: -5px -5px; }
+  .toolbox .export_2 {
+    background-image: url(../img/spritesheet.png);
+    width: 21px;
+    height: 20px;
+    background-position: -36px -5px; }
+  .toolbox .export_3 {
+    background-image: url(../img/spritesheet.png);
+    width: 20px;
+    height: 19px;
+    background-position: -67px -5px; }
+  .toolbox .export_4 {
+    background-image: url(../img/spritesheet.png);
+    width: 21px;
+    height: 20px;
+    background-position: -67px -34px; }
+  .toolbox .export_5 {
+    background-image: url(../img/spritesheet.png);
+    width: 21px;
+    height: 20px;
+    background-position: -5px -64px; }
+  .toolbox .export_6 {
+    background-image: url(../img/spritesheet.png);
+    width: 21px;
+    height: 20px;
+    background-position: -36px -64px; }
+  .toolbox .math_1 {
+    background-image: url(../img/spritesheet.png);
+    width: 20px;
+    height: 16px;
+    background-position: -33px -113px; }
+  .toolbox .math_2 {
+    background-image: url(../img/spritesheet.png);
+    width: 20px;
+    height: 16px;
+    background-position: -63px -113px; }

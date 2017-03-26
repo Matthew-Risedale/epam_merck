@@ -4,6 +4,7 @@ html{
 
 .container{
   max-width: 1200px;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -41,5 +42,12 @@ main{
       top: 7px;
       left: 4px;
     }
+  }
+}
+
+@media(min-width: $screen_md){
+  main .container{
+    width: 80%;
+    margin: 0 auto;
   }
 }
