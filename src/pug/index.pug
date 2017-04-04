@@ -12,18 +12,18 @@ body
   include templates/header.pug
   
   main
-    
-    .container
-      include templates/toolbox.pug
-      
-      - for(var i = 0; i < 4; i++) {
-        include templates/result_item.pug
-      - }
+    .container 
+      .left_side
+        include templates/toolbox.pug
+      .card_wrapper
+        - for(var i = 0; i < 9; i++) {
+          include templates/result_item.pug
+        - }
 
-  script(type='text/javascript' src='assets/js/burger_menu.js')
-  script(type='text/javascript' src='assets/js/subheader_menu.js')
-  script(type='text/javascript' src='assets/js/checkbox.js')
-  script(type='text/javascript' src='assets/js/toolbox.js')
+  script(src='assets/js/burger_menu.js')
+  script(src='assets/js/subheader_menu.js')
+  script(src='assets/js/checkbox.js')
+  script(src='assets/js/toolbox.js')
 
     
     

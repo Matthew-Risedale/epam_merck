@@ -9,3 +9,9 @@ $border_gray: #e2e2e2;
 $dark_gray: #48484a;
 $chekbox_border: #757575;
 $main_background: #fafafa;
+$green_text: #079894;
+
+@mixin gray_text {
+  color: #010101;
+  opacity: 0.54;
+}

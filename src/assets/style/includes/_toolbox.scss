@@ -1,10 +1,19 @@
+.left_side{
+  width: 20%;
+  @media(min-width: $screen_md){
+    width: 10%;
+  }
+}
 .toolbox{
+  position: sticky;
+  z-index: 5;
+  top: 20px;
   width: 75px;
   background: #fff;
   list-style-type: none;
   border: 1px solid $border_gray;
   border-radius: 3px;
-  box-shadow: 0px 6px 8px -3px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 6px -2px rgba(0,0,0,0.25);
   margin-top: 20px;
   &__item {
     & > ul {
@@ -29,9 +38,12 @@
       text-decoration: none;
       border-bottom: 1px solid $border_gray;
       font-size: 13px;
-      color: $dark_gray;
+      @include gray_text;
       padding-left: 10px;
       box-sizing: border-box;
+      &:hover{
+        background-color: darken($main_background, 2);
+      }
       &::before, &::after{
         content: '';
         position: absolute;

@@ -2,8 +2,8 @@
 
 const toolboxItems = document.querySelectorAll(".toolbox__item > a");
 
-for (var i = toolboxItems.length - 1; i>=0; i--) {
-  var toolboxItem = toolboxItems[i];
+for (let i = toolboxItems.length - 1; i>=0; i--) {
+  let toolboxItem = toolboxItems[i];
   toolAction(toolboxItem);
 }
 

@@ -4,8 +4,8 @@ html{
 
 .container{
   max-width: 1200px;
-  overflow: hidden;
   margin: 0 auto;
+  clear: both;
 }
 
 main{
@@ -45,9 +45,15 @@ main{
   }
 }
 
+main .container{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 @media(min-width: $screen_md){
   main .container{
-    width: 80%;
-    margin: 0 auto;
+    width: 85%;
   }
 }
