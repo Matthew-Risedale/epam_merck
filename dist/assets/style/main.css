@@ -728,7 +728,7 @@ main .container {
     .card_wrapper {
       width: 90%; } }
 
-.result_item {
+.card_wrapper--card .result_item {
   background: #fff;
   width: 263px;
   height: 400px;
@@ -736,52 +736,54 @@ main .container {
   margin-top: 20px;
   box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.25);
   box-sizing: border-box; }
-  .result_item header {
+  .card_wrapper--card .result_item:hover {
+    background: #fafafa; }
+  .card_wrapper--card .result_item header {
     height: 65px;
     border-bottom: 1px solid #e2e2e2;
     overflow: hidden;
     box-sizing: border-box; }
-  .result_item__name {
+  .card_wrapper--card .result_item__name {
     font-size: 14px;
     margin-left: 45px; }
-  .result_item__checkbox {
+  .card_wrapper--card .result_item__checkbox {
     float: left;
     margin-top: 15px;
     margin-left: 15px; }
-  .result_item__image {
+  .card_wrapper--card .result_item__image {
     height: 125px;
     overflow: hidden;
     border-bottom: 1px solid #e2e2e2;
     box-sizing: border-box; }
-    .result_item__image img {
+    .card_wrapper--card .result_item__image img {
       display: block;
       margin: 0 auto;
       margin-top: 10px; }
-    .result_item__image figcaption {
+    .card_wrapper--card .result_item__image figcaption {
       font-size: 12px;
       margin-top: 15px; }
-      .result_item__image figcaption a {
+      .card_wrapper--card .result_item__image figcaption a {
         display: block;
         text-align: center;
         color: #079894;
         font-weight: 700;
         text-transform: uppercase; }
-  .result_item__tool {
+  .card_wrapper--card .result_item__tool {
     height: 40px;
     background: #fafafa;
     border-bottom: 1px solid #e2e2e2;
     text-align: center;
     box-sizing: border-box; }
-    .result_item__tool a {
+    .card_wrapper--card .result_item__tool a {
       display: inline-block;
       width: 30px;
       text-decoration: none;
       height: 100%; }
-    .result_item__tool__pencil {
+    .card_wrapper--card .result_item__tool__pencil {
       background: url(../img/item_tool_pencil.png) no-repeat center;
       opacity: 0.7;
       margin-right: 20px; }
-    .result_item__tool__plus {
+    .card_wrapper--card .result_item__tool__plus {
       vertical-align: top;
       line-height: 40px;
       font-size: 19px;
@@ -789,25 +791,25 @@ main .container {
       opacity: 0.54;
       font-weight: 400;
       margin-right: 10px; }
-    .result_item__tool__back {
+    .card_wrapper--card .result_item__tool__back {
       background: url(../img/item_tool_back.png) no-repeat center; }
-    .result_item__tool__forward {
+    .card_wrapper--card .result_item__tool__forward {
       background: url(../img/item_tool_forward.png) no-repeat center; }
-  .result_item__description {
+  .card_wrapper--card .result_item__description {
     height: 170px;
     font-size: 13px;
     color: #010101;
     opacity: 0.54; }
-    .result_item__description__item {
+    .card_wrapper--card .result_item__description__item {
       height: 25%;
       border-bottom: 1px solid #e2e2e2;
       box-sizing: border-box;
       padding: 15px 15px; }
-      .result_item__description__item span {
+      .card_wrapper--card .result_item__description__item span {
         display: inline-block;
         float: left;
         cursor: pointer; }
-      .result_item__description__item input[type='text'] {
+      .card_wrapper--card .result_item__description__item input[type='text'] {
         display: inline-block;
         float: right;
         width: 30%;
@@ -816,5 +818,48 @@ main .container {
         border: none;
         outline: none; }
   @media (min-width: 768px) {
-    .result_item {
+    .card_wrapper--card .result_item {
       width: 293px; } }
+
+.card_wrapper--table {
+  display: table;
+  margin-top: 20px;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box; }
+  .card_wrapper--table .result_item {
+    display: table-row;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #e2e2e2;
+    box-sizing: border-box; }
+    .card_wrapper--table .result_item:hover {
+      background: #fafafa; }
+    .card_wrapper--table .result_item__name {
+      display: none; }
+    .card_wrapper--table .result_item__checkbox {
+      float: left;
+      margin-top: 15px;
+      margin-left: 15px; }
+    .card_wrapper--table .result_item__image {
+      height: 125px;
+      overflow: hidden;
+      box-sizing: border-box; }
+      .card_wrapper--table .result_item__image img {
+        margin: 0 auto;
+        margin-top: 10px;
+        display: table-cell; }
+      .card_wrapper--table .result_item__image figcaption {
+        display: table-cell;
+        font-size: 12px;
+        margin-top: 15px; }
+        .card_wrapper--table .result_item__image figcaption a {
+          text-align: center;
+          color: #079894;
+          font-weight: 700;
+          text-transform: uppercase; }
+    .card_wrapper--table .result_item__tool {
+      display: none; }
+    .card_wrapper--table .result_item__description {
+      display: inline-block; }
+      .card_wrapper--table .result_item__description__item {
+        display: table-cell; }

@@ -15,7 +15,7 @@ body
     .container 
       .left_side
         include templates/toolbox.pug
-      .card_wrapper
+      .card_wrapper.card_wrapper--card
         - for(var i = 0; i < 9; i++) {
           include templates/result_item.pug
         - }
@@ -24,7 +24,7 @@ body
   script(src='assets/js/subheader_menu.js')
   script(src='assets/js/checkbox.js')
   script(src='assets/js/toolbox.js')
-
+  script(src='assets/js/change_view.js')
     
     
   

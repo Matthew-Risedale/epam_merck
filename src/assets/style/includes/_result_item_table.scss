@@ -1,3 +1,60 @@
-.result_item--table{
-
+.card_wrapper--table{
+  display: table;
+  margin-top: 20px;
+  border: 1px solid $border_gray;
+  box-sizing: border-box;
+  .result_item{
+    display: table-row;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid $border_gray;
+    box-sizing: border-box;
+    &:hover{
+      background: $main_background;
+    }
+    header{
+    }
+    &__name{
+      display: none;
+    }
+    &__checkbox{
+      float: left;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+    &__image{
+      height: 125px;
+      overflow: hidden;
+      box-sizing: border-box;
+      img{
+        margin: 0 auto;
+        margin-top: 10px;
+        display: table-cell;
+      }
+      figcaption{
+        display: table-cell;
+        font-size: 12px;
+        margin-top: 15px;
+        a{
+          text-align: center;
+          color: $green_text;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &__tool{
+      display: none;
+    }
+    &__description{
+      display: inline-block;
+      &__item{
+        display: table-cell;
+        span{
+        }
+        input[type='text']{
+        }
+      }
+    }
+  }
 }
